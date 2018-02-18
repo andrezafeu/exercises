@@ -16,16 +16,16 @@ For more than 4 names, the number in and 2 others simply increases.
 =end
 
 def facebook_likes(array)
-  case
-  when array.empty?
+  case array.length
+  when 0
     "no one likes this"
-  when array.length == 1
+  when 1
     "#{array[0]} likes this"
-  when array.length == 2
+  when 2
     "#{array[0]} and #{array[1]} like this"
-  when array.length == 3
+  when 3
     "#{array[0]}, #{array[1]} and #{array[2]} like this"
-  when array.length > 3
+  else
     "#{array[0]}, #{array[1]} and #{array.length - 2} others like this"
   end
 end
